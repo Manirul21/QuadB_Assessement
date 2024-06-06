@@ -1,0 +1,14 @@
+fn max_sum(arr: &[i32]) -> i32 {
+    let mut max = 0;
+    let mut sum = 0;
+    for &value in arr {
+        sum += value;
+        if sum > max {
+            max = sum;
+        }
+        if sum < 0 {
+            sum = 0;
+        }
+    }
+    max
+}

@@ -1,0 +1,9 @@
+fn smallest(arr: &[i32]) -> i32 {
+    let mut min = std::i32::MAX;
+    for &value in arr {
+        if min > value {
+            min = value;
+        }
+    }
+    min
+}

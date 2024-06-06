@@ -1,0 +1,17 @@
+fn merge_sorted_array(array1: &[i32], array2: &[i32]) {
+    let mut new_array = Vec::with_capacity(array1.len() + array2.len());
+
+    for &value in array1 {
+        new_array.push(value);
+    }
+    for &value in array2 {
+        new_array.push(value);
+    }
+
+    new_array.sort();
+
+    for value in new_array {
+        print!("{} ", value);
+    }
+    println!();
+}

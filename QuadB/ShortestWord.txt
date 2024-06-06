@@ -1,0 +1,14 @@
+fn find_shortest_word(s: &str) -> &str {
+    let arr: Vec<&str> = s.split_whitespace().collect();
+
+    let mut min_length = usize::MAX;
+    let mut result = "";
+
+    for word in arr {
+        if word.len() < min_length {
+            min_length = word.len();
+            result = word;
+        }
+    }
+    result
+}
